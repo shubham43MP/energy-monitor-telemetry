@@ -18,3 +18,46 @@
 2025-07-24 13:21:02 | INFO | POST /api/v1/users
 2025-07-24 13:25:38 | INFO | 🟢 Server running at 3001
 2025-07-24 13:25:40 | INFO | POST /api/v1/users
+2025-07-24 15:01:03 | INFO | 🟢 Server running at 3001
+2025-07-24 15:01:47 | INFO | POST /api/v1/auth/login
+2025-07-24 15:02:32 | INFO | POST /api/v1/auth/signin
+2025-07-24 15:02:42 | INFO | POST /api/v1/auth/signin
+2025-07-24 15:04:44 | INFO | POST /api/v1/auth/signin
+2025-07-24 15:05:20 | INFO | POST /api/v1/auth/signin
+2025-07-24 15:05:21 | INFO | POST /api/v1/auth/signin
+2025-07-24 15:05:53 | INFO | POST /api/v1/auth/signin
+2025-07-24 15:06:03 | INFO | 🟢 Server running at 3001
+2025-07-24 15:06:05 | INFO | POST /api/v1/auth/signin
+2025-07-24 15:09:01 | INFO | POST /api/v1/auth/signin
+2025-07-24 15:09:02 | INFO | POST /api/v1/auth/signin
+2025-07-24 15:09:02 | INFO | POST /api/v1/auth/signin
+2025-07-24 15:09:03 | INFO | POST /api/v1/auth/signin
+2025-07-24 15:09:16 | INFO | 🟢 Server running at 3001
+2025-07-24 15:09:20 | INFO | POST /api/v1/auth/signin
+2025-07-24 15:14:18 | INFO | 🟢 Server running at 3001
+2025-07-24 15:17:56 | INFO | 🟢 Server running at 3001
+2025-07-24 15:17:58 | INFO | POST /api/v1/create
+2025-07-24 15:18:09 | INFO | POST /api/v1/create
+2025-07-24 15:18:09 | INFO | POST /api/v1/create
+2025-07-24 15:18:10 | INFO | POST /api/v1/create
+2025-07-24 15:18:27 | INFO | 🟢 Server running at 3001
+2025-07-24 15:18:31 | INFO | POST /api/v1/create
+2025-07-24 15:19:06 | INFO | POST /api/v1/create
+2025-07-24 15:27:03 | INFO | POST /api/v1/create
+2025-07-24 15:27:47 | INFO | POST /api/v1/create
+2025-07-24 15:29:15 | INFO | POST /api/v1/create
+2025-07-24 15:30:26 | INFO | POST /api/v1/create
+2025-07-24 15:31:15 | INFO | POST /api/v1/create
+2025-07-24 15:37:01 | INFO | POST /api/v1/create
+2025-07-24 15:37:06 | INFO | POST /api/v1/create
+2025-07-24 15:39:44 | INFO | 🟢 Server running at 3001
+2025-07-24 15:39:48 | INFO | POST /api/v1/auth/signin
+2025-07-24 15:40:58 | INFO | POST /api/v1/auth/signin
+2025-07-24 15:41:34 | INFO | POST /api/v1/auth/signin
+2025-07-24 15:42:17 | INFO | POST /api/v1/create
+2025-07-24 15:42:35 | INFO | POST /api/v1/auth/signin
+2025-07-24 15:42:35 | INFO | GET /api/v1/devices
+2025-07-24 15:42:35 | INFO | GET /api/v1/devices
+2025-07-24 15:43:47 | INFO | POST /api/v1/auth/signin
+2025-07-24 15:43:47 | INFO | GET /api/v1/devices
+2025-07-24 15:43:47 | INFO | GET /api/v1/devices
