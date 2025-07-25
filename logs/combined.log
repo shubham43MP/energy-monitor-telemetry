@@ -61,3 +61,117 @@
 2025-07-24 15:43:47 | INFO | POST /api/v1/auth/signin
 2025-07-24 15:43:47 | INFO | GET /api/v1/devices
 2025-07-24 15:43:47 | INFO | GET /api/v1/devices
+2025-07-24 16:47:48 | INFO | 🟢 Server running at 3001
+2025-07-24 16:48:31 | INFO | POST /api/v1/create
+2025-07-24 16:48:31 | INFO | Signup attempt for email: niteshtwo@example.com
+2025-07-24 16:48:31 | INFO | User created: 6 (niteshtwo@example.com)
+2025-07-24 16:48:48 | INFO | POST /api/v1/auth/signin
+2025-07-24 16:48:48 | INFO | Signin attempt for email: niteshtwo@example.com
+2025-07-24 16:48:48 | INFO | User logged in: 6 (niteshtwo@example.com)
+2025-07-24 16:57:14 | INFO | 🟢 Server running at 3001
+2025-07-24 16:57:55 | INFO | POST /api/v1/create
+2025-07-24 16:57:55 | INFO | Signup attempt for email: nitesh@example.com
+2025-07-24 16:57:55 | INFO | User created: 1 (nitesh@example.com)
+2025-07-24 16:58:17 | INFO | POST /api/v1/auth/signin
+2025-07-24 16:58:17 | INFO | Signin attempt for email: nitesh@example.com
+2025-07-24 16:58:17 | INFO | User logged in: 1 (nitesh@example.com)
+2025-07-25 11:09:00 | INFO | 🟢 Server running at 3001
+2025-07-25 11:10:34 | INFO | 🟢 Server running at 3001
+2025-07-25 11:12:56 | INFO | POST /api/v1/create
+2025-07-25 11:12:56 | INFO | Signup attempt for email: nitesh@example.com
+2025-07-25 11:12:56 | INFO | User created: 1 (nitesh@example.com)
+2025-07-25 11:13:43 | INFO | POST /api/v1/auth/signin
+2025-07-25 11:13:43 | INFO | Signin attempt for email: nitesh@example.com
+2025-07-25 11:13:44 | INFO | User logged in: 1 (nitesh@example.com)
+2025-07-25 11:15:24 | INFO | GET /api/v1/device/create
+2025-07-25 11:15:37 | INFO | POST /api/v1/device/create
+2025-07-25 11:15:37 | INFO | JsonWebTokenError: secret or public key must be provided
+    at /home/asus/be-boilerplate/node_modules/.pnpm/jsonwebtoken@9.0.2/node_modules/jsonwebtoken/verify.js:113:19
+    at getSecret (/home/asus/be-boilerplate/node_modules/.pnpm/jsonwebtoken@9.0.2/node_modules/jsonwebtoken/verify.js:97:14)
+    at Object.module.exports [as verify] (/home/asus/be-boilerplate/node_modules/.pnpm/jsonwebtoken@9.0.2/node_modules/jsonwebtoken/verify.js:101:10)
+    at authMiddleware (/home/asus/be-boilerplate/src/middlewares/auth.middleware.ts:20:35)
+    at Layer.handle [as handle_request] (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at /home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:346:12)
+2025-07-25 11:16:45 | INFO | 🟢 Server running at 3001
+2025-07-25 11:16:53 | INFO | POST /api/v1/device/create
+2025-07-25 11:16:53 | INFO | Device created: Smart AC for user 1
+2025-07-25 11:18:41 | INFO | GET /api/v1/devices
+2025-07-25 11:31:50 | INFO | 🟢 Server running at 3001
+2025-07-25 11:34:08 | INFO | POST /api/v1/data/create
+2025-07-25 11:34:44 | INFO | POST /api/v1/data/create
+2025-07-25 11:39:28 | INFO | 🟢 Server running at 3001
+2025-07-25 11:39:39 | INFO | POST /api/v1/data/create
+2025-07-25 11:39:39 | INFO | Bulk telemetry entry initiated by user: 1
+2025-07-25 11:39:39 | INFO | Inserted 30 telemetry entries
+2025-07-25 11:42:55 | INFO | GET /api/v1/device/1
+2025-07-25 11:45:42 | INFO | GET /api/v1/device1
+2025-07-25 11:45:47 | INFO | GET /api/v1/device/1
+2025-07-25 11:48:32 | INFO | GET /api/v1/usage/1?day=7
+2025-07-25 11:48:54 | INFO | GET /api/v1/usage/1?days=7
+2025-07-25 11:49:03 | INFO | GET /api/v1/usage/1?days=1
+2025-07-25 11:49:10 | INFO | GET /api/v1/usage/1?days=30
+2025-07-25 12:14:23 | INFO | 🟢 Server running at 3001
+2025-07-25 12:14:25 | INFO | GET /api/v1/usage/1?days=30
+2025-07-25 12:54:36 | INFO | 🟢 Server running at 3001
+2025-07-25 12:55:02 | INFO | POST /api/v1/create
+2025-07-25 12:55:16 | INFO | POST /api/v1/user/create
+2025-07-25 12:55:16 | INFO | Signup attempt for email: nitesh@example.com
+2025-07-25 12:55:17 | INFO | User created: 1 (nitesh@example.com)
+2025-07-25 12:55:37 | INFO | POST /api/v1/auth/signin
+2025-07-25 12:56:54 | INFO | POST /api/v1/user/login
+2025-07-25 12:56:54 | INFO | Signin attempt for email: nitesh@example.com
+2025-07-25 12:56:54 | INFO | User logged in: 1 (nitesh@example.com)
+2025-07-25 12:57:37 | INFO | POST /api/v1/device/create
+2025-07-25 12:58:05 | INFO | POST /api/v1/device/create
+2025-07-25 12:58:05 | INFO | Device created: Smart AC for user 1
+2025-07-25 12:58:45 | INFO | GET /api/v1/devices
+2025-07-25 12:59:19 | INFO | POST /api/v1/data/create
+2025-07-25 13:01:56 | INFO | 🟢 Server running at 3001
+2025-07-25 13:02:07 | INFO | POST /api/v1/data/create
+2025-07-25 13:02:07 | INFO | Bulk telemetry entry initiated by user: 1
+2025-07-25 13:02:07 | INFO | Inserted 30 telemetry entries
+2025-07-25 13:02:42 | INFO | GET /api/v1/device/1
+2025-07-25 13:02:42 | ERROR | TypeError: schema.validate is not a function
+    at /home/asus/be-boilerplate/src/middlewares/validatejoi.middleware.ts:29:34
+    at Layer.handle [as handle_request] (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at authMiddleware (/home/asus/be-boilerplate/src/middlewares/auth.middleware.ts:24:16)
+    at Layer.handle [as handle_request] (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at /home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:284:15
+    at param (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:365:14)
+2025-07-25 13:05:55 | INFO | 🟢 Server running at 3001
+2025-07-25 13:06:01 | INFO | GET /api/v1/device/1
+2025-07-25 13:06:01 | ERROR | TypeError: schema.validate is not a function
+    at /home/asus/be-boilerplate/src/middlewares/validatejoi.middleware.ts:33:34
+    at Layer.handle [as handle_request] (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at authMiddleware (/home/asus/be-boilerplate/src/middlewares/auth.middleware.ts:24:16)
+    at Layer.handle [as handle_request] (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at /home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:284:15
+    at param (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:365:14)
+2025-07-25 13:07:06 | INFO | 🟢 Server running at 3001
+2025-07-25 13:07:09 | INFO | GET /api/v1/device/1
+2025-07-25 13:07:47 | INFO | GET /api/v1/usage/1?days=30
+2025-07-25 13:08:45 | INFO | 🟢 Server running at 3001
+2025-07-25 13:08:54 | INFO | GET /api/v1/usage/1?days=30
+2025-07-25 13:09:52 | INFO | GET /api/v1/usage/1?days=30
+2025-07-25 13:09:53 | INFO | GET /api/v1/usage/1?days=30
+2025-07-25 13:11:59 | INFO | 🟢 Server running at 3001
+2025-07-25 13:12:01 | INFO | GET /api/v1/usage/1?days=30
+2025-07-25 13:15:06 | INFO | 🟢 Server running at 3001
+2025-07-25 13:15:10 | INFO | GET /api/v1/usage/1?days=30
+2025-07-25 13:15:16 | INFO | GET /api/v1/usage/1?days=7
+2025-07-25 13:15:22 | INFO | GET /api/v1/usage/1?days=1
+2025-07-25 13:15:27 | INFO | GET /api/v1/usage/1?days=2
+2025-07-25 13:15:32 | INFO | GET /api/v1/usage/1?days=5
+2025-07-25 13:54:41 | INFO | 🟢 Server running at 3001

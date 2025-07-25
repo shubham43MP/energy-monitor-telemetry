@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 import logger from '../utils/logger';
+import { key } from '../utils/constants';
 
 interface middlewareRequest extends Request {
   user?: string;
@@ -13,8 +14,6 @@ export class AuthMiddleware {
     next: NextFunction
   ) {
     const token = req.headers['authorization']?.split(' ')[1] || '';
-
-    const key = process.env.JWT_JWT_SECRET || '';
 
     try {
       const isAuthenticated = jwt.verify(token, key);

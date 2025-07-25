@@ -1,0 +1,22 @@
+2025-07-25 13:02:42 | ERROR | TypeError: schema.validate is not a function
+    at /home/asus/be-boilerplate/src/middlewares/validatejoi.middleware.ts:29:34
+    at Layer.handle [as handle_request] (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at authMiddleware (/home/asus/be-boilerplate/src/middlewares/auth.middleware.ts:24:16)
+    at Layer.handle [as handle_request] (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at /home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:284:15
+    at param (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:365:14)
+2025-07-25 13:06:01 | ERROR | TypeError: schema.validate is not a function
+    at /home/asus/be-boilerplate/src/middlewares/validatejoi.middleware.ts:33:34
+    at Layer.handle [as handle_request] (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at authMiddleware (/home/asus/be-boilerplate/src/middlewares/auth.middleware.ts:24:16)
+    at Layer.handle [as handle_request] (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at /home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:284:15
+    at param (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:365:14)

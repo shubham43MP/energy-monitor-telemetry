@@ -1,0 +1,215 @@
+openapi: 3.0.0
+info:
+  title: Smart Home Energy Monitoring API
+  version: 1.0.0
+  description: REST API for user authentication, device management, and telemetry data.
+
+servers:
+  - url: http://localhost:3001/api/v1
+
+tags:
+  - name: User
+  - name: Device
+  - name: Telemetry
+
+paths:
+  /user/create:
+    post:
+      tags: [User]
+      summary: Create a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [username, email, password]
+              properties:
+                username:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        201:
+          description: User created
+          content:
+            application/json:
+              example:
+                message: User created successfully!
+                userId: 1
+
+  /user/login:
+    post:
+      tags: [User]
+      summary: User login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password]
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        200:
+          description: Successful login
+          content:
+            application/json:
+              example:
+                message: User logged in successfully!
+                token: eyJhbGciOi...
+
+  /device/create:
+    post:
+      tags: [Device]
+      summary: Create a device
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name, type]
+              properties:
+                name:
+                  type: string
+                type:
+                  type: string
+      responses:
+        201:
+          description: Device created
+          content:
+            application/json:
+              example:
+                message: Device created
+                data:
+                  id: 1
+                  name: Smart AC
+                  type: appliance
+                  userId: 1
+                  createdAt: 2025-07-25T07:28:05.858Z
+
+  /devices:
+    get:
+      tags: [Device]
+      summary: Get all user devices
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: List of devices
+          content:
+            application/json:
+              example:
+                devices:
+                  - id: 1
+                    name: Smart AC
+                    type: appliance
+                    userId: 1
+                    createdAt: 2025-07-25T07:28:05.858Z
+
+  /data/create:
+    post:
+      tags: [Telemetry]
+      summary: Submit telemetry data
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                entries:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      deviceId:
+                        type: integer
+                      energyWatts:
+                        type: number
+                      timestamp:
+                        type: string
+                        format: date-time
+      responses:
+        201:
+          description: Telemetry submitted
+          content:
+            application/json:
+              example:
+                message: Telemetry recorded
+                inserted: 30
+
+  /device/{deviceId}:
+    get:
+      tags: [Telemetry]
+      summary: Get telemetry data by device ID
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: deviceId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Telemetry for device
+          content:
+            application/json:
+              example:
+                telemetry:
+                  - id: 1
+                    timestamp: 2025-06-24T10:00:00.000Z
+                    energyWatts: 54.3
+                    deviceId: 1
+                    createdAt: 2025-07-25T07:32:07.141Z
+
+  /usage/{deviceId}:
+    get:
+      tags: [Telemetry]
+      summary: Get telemetry usage by device and days
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: deviceId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: days
+          in: query
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 30
+      responses:
+        200:
+          description: Telemetry usage
+          content:
+            application/json:
+              example:
+                telemetry:
+                  - id: 30
+                    timestamp: 2025-07-23T10:00:00.000Z
+                    energyWatts: 64.7
+                    deviceId: 1
+                    createdAt: 2025-07-25T07:32:07.141Z
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

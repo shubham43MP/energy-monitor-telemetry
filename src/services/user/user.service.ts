@@ -1,43 +1,48 @@
-import { Request, Response } from 'express';
-import { prisma } from '../../Prisma';
+import { Response } from 'express';
 import bcrypt from 'bcryptjs';
+import { prisma } from '../../Prisma';
+import logger from '../../utils/logger';
+
+interface SignupInput {
+  username: string;
+  email: string;
+  password: string;
+}
 
 export class UserService {
-  static async userSignupService(req: Request, res: Response){
-    const { username, email, password } = req.body;
-
-    if (!username || !email || !password) {
-      res.status(400).json({
-        message: 'Incomplete data. Please provide all required fields.',
-      });
-      return;
-    }
-
+  static async userSignupService(userData: SignupInput, res: Response) {
     try {
-      const ifExisting = await prisma.user.findUnique({ where: { email } });
+      const { username, email, password } = userData;
 
-      if (ifExisting) {
-        res.status(400).json({ error: 'Email already in use!' });
-        return;
+      const existingUser = await prisma.user.findUnique({
+        where: { email },
+      });
+
+      if (existingUser) {
+        logger.warn(`Signup failed: Email already exists - ${email}`);
+        return res.status(400).json({ error: 'Email already in use!' });
       }
 
       const hashedPassword = await bcrypt.hash(password, 10);
 
       const user = await prisma.user.create({
-        data: { username, email, password: hashedPassword },
+        data: {
+          username,
+          email,
+          password: hashedPassword,
+        },
       });
 
-      res.status(201).json({
+      logger.info(`User created: ${user.id} (${email})`);
+
+      return res.status(201).json({
         message: 'User created successfully!',
         userId: user.id,
       });
-
-      return;
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Unknown error';
-      console.error('Signup error:', message);
-      res.status(500).json({ error: message });
-      return;
+      logger.error(`Signup service error: ${message}`);
+      return res.status(500).json({ error: 'Internal Server Error' });
     }
   }
 }

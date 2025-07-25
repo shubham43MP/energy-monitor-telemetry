@@ -1,45 +1,47 @@
-import { Request, Response } from 'express';
+import { Response } from 'express';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import { prisma } from '../../Prisma';
 import logger from '../../utils/logger';
+import { key } from '../../utils/constants';
+
+interface SigninInput {
+  email: string;
+  password: string;
+}
 
 export class AuthService {
-  static async signinService(req: Request, res: Response) {
-    const { email, password } = req.body;
-
-    if (!email || !password) {
-      res
-        .status(400)
-        .json({ message: 'Please provide mentioned credentials!' });
-    }
-
+  static async signinService(data: SigninInput, res: Response) {
     try {
-      const ifExisitng = await prisma.user.findUnique({ where: { email } });
+      const { email, password } = data;
 
-      if (ifExisitng) {
-        const actualPassword = ifExisitng.password;
+      const user = await prisma.user.findUnique({ where: { email } });
 
-        const validUser = await bcrypt.compare(password, actualPassword);
-
-        if (validUser) {
-          const key = process.env.JWT_SECRET || '';
-          const userId = ifExisitng.id;
-          const token = jwt.sign({ userId, email }, key, { expiresIn: '1d' });
-          return res
-            .status(201)
-            .json({ message: 'User logged in successfully!', token });
-        }
+      if (!user) {
+        logger.warn(`Signin failed: User not found (${email})`);
+        return res.status(400).json({ message: 'Invalid credentials' });
       }
-      res
-        .status(400)
-        .json({ message: 'please provide valid data!', ifExisitng });
+
+      const isValid = await bcrypt.compare(password, user.password);
+
+      if (!isValid) {
+        logger.warn(`Signin failed: Invalid password for ${email}`);
+        return res.status(400).json({ message: 'Invalid credentials' });
+      }
+
+      const token = jwt.sign({ userId: user.id, email }, key, {
+        expiresIn: '1d',
+      });
+
+      logger.info(`User logged in: ${user.id} (${email})`);
+      return res.status(200).json({
+        message: 'User logged in successfully!',
+        token,
+      });
     } catch (err) {
-      if (err instanceof Error) {
-        throw new Error(err.message);
-      } else {
-        throw new Error('Unknown error');
-      }
+      const message = err instanceof Error ? err.message : 'Unknown error';
+      logger.error(`Signin service error: ${message}`);
+      return res.status(500).json({ error: 'Internal Server Error' });
     }
   }
 }
