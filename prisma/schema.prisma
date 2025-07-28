@@ -14,23 +14,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
-
-model User {
-  id        Int      @id @default(autoincrement())
-  username  String
-  email     String   @unique
-  password  String
-  devices   Device[]
-  createdAt DateTime @default(now())
-}
-
 model Device {
   id        Int         @id @default(autoincrement())
   name      String
-  type      String      // Optional, e.g. AC, Fridge
-  userId    Int
-  user      User        @relation(fields: [userId], references: [id])
+  type      String      
+  userId    Int         
   telemetry Telemetry[]
   createdAt DateTime    @default(now())
 }
@@ -43,4 +31,5 @@ model Telemetry {
   device      Device    @relation(fields: [deviceId], references: [id])
   createdAt   DateTime  @default(now())
 }
+
 

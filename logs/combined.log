@@ -751,3 +751,327 @@ Please make sure to provide valid database credentials for the database server a
 2025-07-28 11:49:54 | INFO | Inserted 10 telemetry entries
 2025-07-28 11:50:12 | INFO | GET /api/v1/devices
 2025-07-28 11:50:12 | INFO | GET /api/v1/devices
+2025-07-28 11:57:38 | INFO | GET /api/v1/usage/3?days=7
+2025-07-28 11:57:39 | INFO | GET /api/v1/usage/3?days=7
+2025-07-28 11:57:42 | INFO | GET /api/v1/devices
+2025-07-28 11:57:42 | INFO | GET /api/v1/devices
+2025-07-28 11:59:22 | INFO | GET /api/v1/devices
+2025-07-28 11:59:22 | INFO | GET /api/v1/devices
+2025-07-28 11:59:23 | INFO | GET /api/v1/devices
+2025-07-28 11:59:23 | INFO | GET /api/v1/devices
+2025-07-28 11:59:24 | INFO | GET /api/v1/usage/2?days=7
+2025-07-28 11:59:24 | INFO | GET /api/v1/usage/2?days=7
+2025-07-28 11:59:43 | INFO | POST /api/v1/user/login
+2025-07-28 11:59:43 | INFO | Signin attempt for email: test2@gmail.com
+2025-07-28 11:59:43 | INFO | User logged in: 2 (test2@gmail.com)
+2025-07-28 11:59:43 | INFO | GET /api/v1/devices
+2025-07-28 11:59:43 | INFO | GET /api/v1/devices
+2025-07-28 12:00:06 | INFO | GET /api/v1/usage/3?days=7
+2025-07-28 12:00:06 | INFO | GET /api/v1/usage/3?days=7
+2025-07-28 12:00:09 | INFO | GET /api/v1/devices
+2025-07-28 12:00:09 | INFO | GET /api/v1/devices
+2025-07-28 12:00:11 | INFO | GET /api/v1/usage/3?days=7
+2025-07-28 12:00:11 | INFO | GET /api/v1/usage/3?days=7
+2025-07-28 12:00:28 | INFO | GET /api/v1/usage/3?days=30
+2025-07-28 12:00:32 | INFO | GET /api/v1/usage/3?days=1
+2025-07-28 12:00:34 | INFO | GET /api/v1/usage/3?days=7
+2025-07-28 12:00:36 | INFO | GET /api/v1/usage/3?days=30
+2025-07-28 13:04:44 | ERROR | ❌ Failed to connect to DB via Prisma: PrismaClientInitializationError: Database `telemetry` does not exist
+2025-07-28 13:05:36 | ERROR | ❌ Failed to connect to DB via Prisma: PrismaClientInitializationError: Database `telemetry` does not exist
+2025-07-28 13:23:30 | INFO | ✅ Prisma connected to Docker Postgres
+2025-07-28 13:23:30 | INFO | 🟢 Server running at 3002
+2025-07-28 13:24:19 | INFO | POST /api/v1/device/create
+2025-07-28 13:24:19 | INFO | Device created: Smart AC for user 1
+2025-07-28 13:24:46 | INFO | GET /api/v1/devices
+2025-07-28 13:25:13 | INFO | POST /api/v1/data/create
+2025-07-28 13:25:13 | INFO | Bulk telemetry entry initiated by user: 1
+2025-07-28 13:25:13 | INFO | Inserted 30 telemetry entries
+2025-07-28 13:25:51 | INFO | GET /api/v1/device/1
+2025-07-28 13:26:10 | INFO | GET /api/v1/usage/1?days=30
+2025-07-28 14:44:01 | INFO | ✅ Prisma connected to Docker Postgres
+2025-07-28 14:44:01 | INFO | 🟢 Server running at 3002
+2025-07-28 14:44:50 | INFO | GET /api/v1/devices
+2025-07-28 14:44:50 | INFO | JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (/home/asus/backend telemetry/node_modules/.pnpm/jsonwebtoken@9.0.2/node_modules/jsonwebtoken/verify.js:60:17)
+    at authMiddleware (/home/asus/backend telemetry/src/middlewares/auth.middleware.ts:19:35)
+    at Layer.handle [as handle_request] (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at /home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:175:3)
+2025-07-28 14:44:50 | INFO | GET /api/v1/devices
+2025-07-28 14:44:50 | INFO | JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (/home/asus/backend telemetry/node_modules/.pnpm/jsonwebtoken@9.0.2/node_modules/jsonwebtoken/verify.js:60:17)
+    at authMiddleware (/home/asus/backend telemetry/src/middlewares/auth.middleware.ts:19:35)
+    at Layer.handle [as handle_request] (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at /home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:175:3)
+2025-07-28 14:44:51 | INFO | GET /api/v1/devices
+2025-07-28 14:44:51 | INFO | JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (/home/asus/backend telemetry/node_modules/.pnpm/jsonwebtoken@9.0.2/node_modules/jsonwebtoken/verify.js:60:17)
+    at authMiddleware (/home/asus/backend telemetry/src/middlewares/auth.middleware.ts:19:35)
+    at Layer.handle [as handle_request] (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at /home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:175:3)
+2025-07-28 14:44:51 | INFO | GET /api/v1/devices
+2025-07-28 14:44:51 | INFO | JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (/home/asus/backend telemetry/node_modules/.pnpm/jsonwebtoken@9.0.2/node_modules/jsonwebtoken/verify.js:60:17)
+    at authMiddleware (/home/asus/backend telemetry/src/middlewares/auth.middleware.ts:19:35)
+    at Layer.handle [as handle_request] (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at /home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:175:3)
+2025-07-28 14:44:54 | INFO | GET /api/v1/devices
+2025-07-28 14:44:54 | INFO | JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (/home/asus/backend telemetry/node_modules/.pnpm/jsonwebtoken@9.0.2/node_modules/jsonwebtoken/verify.js:60:17)
+    at authMiddleware (/home/asus/backend telemetry/src/middlewares/auth.middleware.ts:19:35)
+    at Layer.handle [as handle_request] (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at /home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:175:3)
+2025-07-28 14:44:54 | INFO | GET /api/v1/devices
+2025-07-28 14:44:54 | INFO | JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (/home/asus/backend telemetry/node_modules/.pnpm/jsonwebtoken@9.0.2/node_modules/jsonwebtoken/verify.js:60:17)
+    at authMiddleware (/home/asus/backend telemetry/src/middlewares/auth.middleware.ts:19:35)
+    at Layer.handle [as handle_request] (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at /home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/home/asus/backend telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:175:3)
+2025-07-28 14:45:59 | INFO | GET /api/v1/devices
+2025-07-28 14:45:59 | INFO | GET /api/v1/devices
+2025-07-28 14:46:12 | INFO | POST /api/v1/device/create
+2025-07-28 14:46:12 | INFO | Device created: AC for user 2
+2025-07-28 14:46:14 | INFO | GET /api/v1/devices
+2025-07-28 14:46:14 | INFO | GET /api/v1/devices
+2025-07-28 14:46:24 | INFO | GET /api/v1/usage/2?days=7
+2025-07-28 14:46:24 | INFO | GET /api/v1/usage/2?days=7
+2025-07-28 14:46:34 | INFO | POST /api/v1/data/create
+2025-07-28 14:46:34 | INFO | Bulk telemetry entry initiated by user: 2
+2025-07-28 14:46:34 | INFO | Inserted 11 telemetry entries
+2025-07-28 14:46:37 | INFO | GET /api/v1/devices
+2025-07-28 14:46:37 | INFO | GET /api/v1/devices
+2025-07-28 14:46:38 | INFO | GET /api/v1/usage/2?days=7
+2025-07-28 14:46:38 | INFO | GET /api/v1/usage/2?days=7
+2025-07-28 14:46:50 | INFO | GET /api/v1/usage/2?days=30
+2025-07-28 14:47:03 | INFO | GET /api/v1/usage/2?days=1
+2025-07-28 14:47:04 | INFO | GET /api/v1/usage/2?days=7
+2025-07-28 14:47:05 | INFO | GET /api/v1/usage/2?days=30
+2025-07-28 14:47:08 | INFO | GET /api/v1/devices
+2025-07-28 14:47:08 | INFO | GET /api/v1/devices
+2025-07-28 14:48:46 | INFO | GET /api/v1/devices
+2025-07-28 14:48:46 | INFO | GET /api/v1/devices
+2025-07-28 14:52:09 | INFO | GET /api/v1/devices
+2025-07-28 14:52:09 | INFO | GET /api/v1/devices
+2025-07-28 14:55:14 | INFO | GET /api/v1/devices
+2025-07-28 14:55:14 | INFO | GET /api/v1/devices
+2025-07-28 15:01:45 | INFO | GET /api/v1/devices
+2025-07-28 15:01:45 | INFO | GET /api/v1/devices
+2025-07-28 15:01:54 | INFO | GET /api/v1/devices
+2025-07-28 15:01:54 | INFO | GET /api/v1/devices
+2025-07-28 15:02:17 | INFO | GET /api/v1/devices
+2025-07-28 15:02:17 | INFO | GET /api/v1/devices
+2025-07-28 15:04:21 | INFO | GET /api/v1/devices
+2025-07-28 15:04:21 | INFO | GET /api/v1/devices
+2025-07-28 15:05:01 | INFO | GET /api/v1/devices
+2025-07-28 15:05:01 | INFO | GET /api/v1/devices
+2025-07-28 15:05:09 | INFO | GET /api/v1/usage/2?days=7
+2025-07-28 15:05:09 | INFO | GET /api/v1/usage/2?days=7
+2025-07-28 15:05:13 | INFO | GET /api/v1/usage/2?days=30
+2025-07-28 15:05:40 | INFO | GET /api/v1/devices
+2025-07-28 15:05:40 | INFO | GET /api/v1/devices
+2025-07-28 15:05:55 | INFO | GET /api/v1/devices
+2025-07-28 15:05:56 | INFO | GET /api/v1/devices
+2025-07-28 15:13:54 | INFO | GET /api/v1/devices
+2025-07-28 15:13:54 | INFO | GET /api/v1/devices
+2025-07-28 15:13:57 | INFO | GET /api/v1/usage/2?days=7
+2025-07-28 15:13:57 | INFO | GET /api/v1/usage/2?days=7
+2025-07-28 15:14:01 | INFO | GET /api/v1/devices
+2025-07-28 15:14:01 | INFO | GET /api/v1/devices
+2025-07-28 15:14:07 | INFO | GET /api/v1/devices
+2025-07-28 15:14:07 | INFO | GET /api/v1/devices
+2025-07-28 15:14:09 | INFO | GET /api/v1/usage/2?days=7
+2025-07-28 15:14:09 | INFO | GET /api/v1/usage/2?days=7
+2025-07-28 15:14:26 | INFO | GET /api/v1/devices
+2025-07-28 15:14:27 | INFO | GET /api/v1/devices
+2025-07-28 15:35:23 | INFO | GET /api/v1/devices
+2025-07-28 15:35:23 | INFO | GET /api/v1/devices
+2025-07-28 15:35:31 | INFO | ✅ Prisma connected to Docker Postgres
+2025-07-28 16:42:39 | INFO | ✅ Prisma connected to Docker Postgres
+2025-07-28 16:42:39 | INFO | 🟢 Server running at 3002
+2025-07-28 16:44:30 | INFO | ✅ Prisma connected to Docker Postgres
+2025-07-28 16:44:30 | INFO | 🟢 Server running at 3011
+2025-07-28 16:45:23 | INFO | GET /api/v1/devices
+2025-07-28 16:45:23 | INFO | JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/jsonwebtoken@9.0.2/node_modules/jsonwebtoken/verify.js:60:17)
+    at authMiddleware (/home/asus/assignment/backend/telemetry/src/middlewares/auth.middleware.ts:19:35)
+    at Layer.handle [as handle_request] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at /home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:175:3)
+2025-07-28 16:45:23 | INFO | GET /api/v1/devices
+2025-07-28 16:45:23 | INFO | JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/jsonwebtoken@9.0.2/node_modules/jsonwebtoken/verify.js:60:17)
+    at authMiddleware (/home/asus/assignment/backend/telemetry/src/middlewares/auth.middleware.ts:19:35)
+    at Layer.handle [as handle_request] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at /home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:175:3)
+2025-07-28 16:45:25 | INFO | GET /api/v1/devices
+2025-07-28 16:45:25 | INFO | JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/jsonwebtoken@9.0.2/node_modules/jsonwebtoken/verify.js:60:17)
+    at authMiddleware (/home/asus/assignment/backend/telemetry/src/middlewares/auth.middleware.ts:19:35)
+    at Layer.handle [as handle_request] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at /home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:175:3)
+2025-07-28 16:45:25 | INFO | GET /api/v1/devices
+2025-07-28 16:45:25 | INFO | JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/jsonwebtoken@9.0.2/node_modules/jsonwebtoken/verify.js:60:17)
+    at authMiddleware (/home/asus/assignment/backend/telemetry/src/middlewares/auth.middleware.ts:19:35)
+    at Layer.handle [as handle_request] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at /home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:175:3)
+2025-07-28 16:45:27 | INFO | GET /api/v1/devices
+2025-07-28 16:45:27 | INFO | JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/jsonwebtoken@9.0.2/node_modules/jsonwebtoken/verify.js:60:17)
+    at authMiddleware (/home/asus/assignment/backend/telemetry/src/middlewares/auth.middleware.ts:19:35)
+    at Layer.handle [as handle_request] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at /home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:175:3)
+2025-07-28 16:45:27 | INFO | GET /api/v1/devices
+2025-07-28 16:45:27 | INFO | JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/jsonwebtoken@9.0.2/node_modules/jsonwebtoken/verify.js:60:17)
+    at authMiddleware (/home/asus/assignment/backend/telemetry/src/middlewares/auth.middleware.ts:19:35)
+    at Layer.handle [as handle_request] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at /home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:175:3)
+2025-07-28 16:45:29 | INFO | GET /api/v1/devices
+2025-07-28 16:45:29 | INFO | JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/jsonwebtoken@9.0.2/node_modules/jsonwebtoken/verify.js:60:17)
+    at authMiddleware (/home/asus/assignment/backend/telemetry/src/middlewares/auth.middleware.ts:19:35)
+    at Layer.handle [as handle_request] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at /home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:175:3)
+2025-07-28 16:45:29 | INFO | GET /api/v1/devices
+2025-07-28 16:45:29 | INFO | JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/jsonwebtoken@9.0.2/node_modules/jsonwebtoken/verify.js:60:17)
+    at authMiddleware (/home/asus/assignment/backend/telemetry/src/middlewares/auth.middleware.ts:19:35)
+    at Layer.handle [as handle_request] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
+    at /home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/home/asus/assignment/backend/telemetry/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:175:3)
+2025-07-28 16:46:05 | INFO | GET /api/v1/devices
+2025-07-28 16:46:05 | INFO | GET /api/v1/devices
+2025-07-28 16:46:23 | INFO | POST /api/v1/device/create
+2025-07-28 16:46:26 | INFO | GET /api/v1/devices
+2025-07-28 16:46:27 | INFO | GET /api/v1/devices
+2025-07-28 16:46:35 | INFO | GET /api/v1/usage/3?days=7
+2025-07-28 16:46:35 | INFO | GET /api/v1/usage/3?days=7
+2025-07-28 16:46:42 | INFO | POST /api/v1/data/create
+2025-07-28 16:46:46 | INFO | GET /api/v1/devices
+2025-07-28 16:46:46 | INFO | GET /api/v1/devices
+2025-07-28 16:46:47 | INFO | GET /api/v1/usage/3?days=7
+2025-07-28 16:46:47 | INFO | GET /api/v1/usage/3?days=7
+2025-07-28 16:46:50 | INFO | GET /api/v1/usage/3?days=30
+2025-07-28 16:46:51 | INFO | GET /api/v1/usage/3?days=7
+2025-07-28 16:47:23 | INFO | GET /api/v1/devices
+2025-07-28 16:47:23 | INFO | GET /api/v1/devices
+2025-07-28 16:47:24 | INFO | GET /api/v1/usage/3?days=7
+2025-07-28 16:47:24 | INFO | GET /api/v1/usage/3?days=7
+2025-07-28 16:47:27 | INFO | GET /api/v1/devices
+2025-07-28 16:47:27 | INFO | GET /api/v1/devices
+2025-07-28 16:47:35 | INFO | POST /api/v1/device/create
+2025-07-28 16:47:43 | INFO | GET /api/v1/devices
+2025-07-28 16:47:44 | INFO | GET /api/v1/devices
+2025-07-28 16:47:44 | INFO | GET /api/v1/usage/4?days=7
+2025-07-28 16:47:44 | INFO | GET /api/v1/usage/4?days=7
+2025-07-28 16:47:55 | INFO | POST /api/v1/data/create
+2025-07-28 16:48:06 | INFO | GET /api/v1/devices
+2025-07-28 16:48:06 | INFO | GET /api/v1/devices
+2025-07-28 16:48:07 | INFO | GET /api/v1/usage/3?days=7
+2025-07-28 16:48:07 | INFO | GET /api/v1/usage/3?days=7
+2025-07-28 16:48:09 | INFO | GET /api/v1/devices
+2025-07-28 16:48:09 | INFO | GET /api/v1/devices
+2025-07-28 16:48:10 | INFO | GET /api/v1/usage/4?days=7
+2025-07-28 16:48:10 | INFO | GET /api/v1/usage/4?days=7
+2025-07-28 16:48:13 | INFO | GET /api/v1/usage/4?days=30
+2025-07-28 16:48:18 | INFO | GET /api/v1/devices
+2025-07-28 16:48:18 | INFO | GET /api/v1/devices
+2025-07-28 16:48:46 | INFO | GET /api/v1/devices
+2025-07-28 16:48:46 | INFO | GET /api/v1/devices
+2025-07-28 16:48:56 | INFO | GET /api/v1/devices
+2025-07-28 16:48:56 | INFO | GET /api/v1/devices
+2025-07-28 16:48:57 | INFO | GET /api/v1/usage/4?days=7
+2025-07-28 16:48:57 | INFO | GET /api/v1/usage/4?days=7
+2025-07-28 16:49:11 | INFO | GET /api/v1/usage/4?days=30
+2025-07-28 16:49:12 | INFO | GET /api/v1/devices
+2025-07-28 16:49:12 | INFO | GET /api/v1/devices
+2025-07-28 16:50:14 | INFO | GET /api/v1/devices
+2025-07-28 16:50:14 | INFO | GET /api/v1/devices
+2025-07-28 16:50:20 | INFO | GET /api/v1/devices
+2025-07-28 16:50:20 | INFO | GET /api/v1/devices
+2025-07-28 16:50:26 | INFO | GET /api/v1/devices
+2025-07-28 16:50:26 | INFO | GET /api/v1/devices
+2025-07-28 16:50:51 | INFO | GET /api/v1/devices
+2025-07-28 16:50:51 | INFO | GET /api/v1/devices

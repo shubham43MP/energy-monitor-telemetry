@@ -1,25 +1,24 @@
-import { Request, Response } from 'express';
+import { Request } from 'express';
 import { DeviceService } from '../../services/device/device.service';
-import logger from '../../utils/logger';
+
+interface MiddlewareRequest extends Request {
+  user?: string;
+}
 
 export class DeviceController {
-  static async createDeviceController(req: Request, res: Response) {
-    try {
-      await DeviceService.createDevice(req, res);
-    } catch (err) {
-      const message = err instanceof Error ? err.message : 'Unexpected error';
-      logger.error(`createDeviceController error: ${message}`);
-      return res.status(500).json({ error: message });
-    }
+  static async createDeviceController(req: MiddlewareRequest) {
+    const { name, type } = req.body;
+    const userId = Number(req.user);
+
+    const device = await DeviceService.createDevice({ name, type, userId });
+
+    return { message: 'Device created', data: device };
   }
 
-  static async getUserDevicesController(req: Request, res: Response) {
-    try {
-      await DeviceService.getDevicesForUser(req, res);
-    } catch (err) {
-      const message = err instanceof Error ? err.message : 'Unexpected error';
-      logger.error(`getUserDevicesController error: ${message}`);
-      return res.status(500).json({ error: message });
-    }
+  static async getUserDevicesController(req: MiddlewareRequest) {
+    const userId = Number(req.user);
+    const devices = await DeviceService.getDevicesForUser(userId);
+
+    return { devices };
   }
 }
