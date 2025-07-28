@@ -20,3 +20,14 @@
     at Layer.handle [as handle_request] (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/layer.js:95:5)
     at /home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:284:15
     at param (/home/asus/be-boilerplate/node_modules/.pnpm/express@4.21.2/node_modules/express/lib/router/index.js:365:14)
+2025-07-25 14:17:44 | ERROR | ❌ Failed to connect to DB via Prisma: PrismaClientInitializationError: [1;91merror[0m: [1mError validating datasource `db`: the URL must start with the protocol `postgresql://` or `postgres://`.[0m
+  [1;94m-->[0m  [4mschema.prisma:13[0m
+[1;94m   | [0m
+[1;94m12 | [0m  provider = "postgresql"
+[1;94m13 | [0m  url      = [1;91menv("DATABASE_URL")[0m
+[1;94m   | [0m
+
+Validation Error Count: 1
+2025-07-25 14:20:23 | ERROR | ❌ Failed to connect to DB via Prisma: PrismaClientInitializationError: Authentication failed against database server, the provided database credentials for `postgres` are not valid.
+
+Please make sure to provide valid database credentials for the database server at the configured address.

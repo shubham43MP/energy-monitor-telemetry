@@ -6,7 +6,9 @@
     "format": "prettier --write .",
     "prepare": "husky install",
     "start": "ts-node src/server.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "docker": "docker compose up -d",
+    "dev:full": "pnpm docker && pnpm dev"
   },
   "devDependencies": {
     "@types/bcryptjs": "^3.0.0",
