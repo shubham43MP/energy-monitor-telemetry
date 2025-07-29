@@ -1,11 +1,18 @@
-# Telemetry Service
+# 📡 Telemetry Service
 
 This is the **Telemetry** microservice for the Smart Home Energy Monitoring system.
 
+---
+
 ## 📦 Environment Setup
 
-1. Create a `.env` file in the root of this service.
-2. Add required environment variables. Example:
+1. Copy the example environment file:
+
+```bash
+cp .env.example .env
+```
+
+2. Then update the `.env` file with your actual values:
 
 ```env
 PORT=3014
@@ -13,14 +20,24 @@ JWT_SECRET=mysecretkey
 DATABASE_URL=postgresql://postgres:mypassword@localhost:5434/telemetry
 ```
 
+> 🐳 If using Docker Compose, replace `localhost` with the database container name (e.g. `telemetry_postgres`):
+>
+> ```env
+> DATABASE_URL=postgresql://postgres:mypassword@telemetry_postgres:5432/telemetry
+> ```
+
+---
+
 ## 🧪 Local Development
 
-Make sure you have `pnpm` installed. Then run:
+Make sure you have [`pnpm`](https://pnpm.io/installation) installed. Then run:
 
 ```bash
 pnpm install
 pnpm dev
 ```
+
+---
 
 ## 🐳 Docker Deployment
 
@@ -31,17 +48,21 @@ docker build -t telemetry-service .
 docker run -p 3014:3014 --env-file .env telemetry-service
 ```
 
-> Make sure the database defined in your `.env` is already running and accessible.
+> ✅ Ensure the database defined in your `.env` is already running and accessible.
+
+---
 
 ### Docker Compose (service + Postgres)
 
-If you want to run both the service and its database using Docker Compose and make sure you replace localhost in databse uri with container name:
+If you want to run both the service and its database using Docker Compose:
 
 ```bash
 docker compose up --build
 ```
 
-> Ensure your `docker-compose.yaml` exposes and maps the Postgres port (`5432`) to `5434` and sets `POSTGRES_DB=telemetry`.
+> Make sure to replace `localhost` in the `.env` `DATABASE_URL` with `telemetry_postgres`.
+
+---
 
 ### Example `docker-compose.yaml`
 
@@ -73,3 +94,21 @@ services:
 volumes:
   telemetry_pgdata:
 ```
+
+---
+
+## ✅ Health Check
+
+You can test if the service is running with:
+
+```bash
+curl http://localhost:3014/api/health
+```
+
+---
+
+## 🔁 Notes
+
+- Requires **PostgreSQL**.
+- Uses **JWT** for authentication.
+- Exposes port **3014**.
