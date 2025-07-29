@@ -64,39 +64,6 @@ docker compose up --build
 
 ---
 
-### Example `docker-compose.yaml`
-
-```yaml
-services:
-  telemetry_postgres:
-    image: postgres:15
-    container_name: telemetry_postgres
-    restart: always
-    ports:
-      - '5434:5432'
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: mypassword
-      POSTGRES_DB: telemetry
-    volumes:
-      - telemetry_pgdata:/var/lib/postgresql/data
-
-  telemetry_service:
-    build: .
-    container_name: telemetry_service
-    ports:
-      - '3014:3014'
-    depends_on:
-      - telemetry_postgres
-    env_file:
-      - .env
-
-volumes:
-  telemetry_pgdata:
-```
-
----
-
 ## ✅ Health Check
 
 You can test if the service is running with:
